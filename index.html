@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
   <link rel="stylesheet" href="./style/style.css">
@@ -10,25 +10,40 @@
   <title>Frontend Mentor | Expenses chart component</title>
 </head>
 <body>
-
-  My balance
-  $921.48
-
-  Spending - Last 7 days
-
-  mon
-  tue
-  wed
-  thu
-  fri
-  sat
-  sun
-
-  Total this month
-  $478.33
-
-  +2.4%
-  from last month
-  
+  <div class="wrapper">
+    <div class="expenses-chart">
+      <div class="expenses-chart__balance balance">
+        <div class="balance__info">
+          <span class="balance__title">My balance</span>
+          <span class="balance__amount">$921.48</span>
+        </div>
+        <img src="./images/logo.svg" alt="Logo">
+      </div>
+      <div class="expenses-chart__details">
+        <h2 class="expenses-chart__title">Spending - Last 7 days</h2>
+        <div class="expenses-chart__chart">
+          <ul class="expenses-chart__list">
+            <li class="expenses-chart__day">mon</li>
+            <li class="expenses-chart__day">tue</li>
+            <li class="expenses-chart__day">wed/li>
+            <li class="expenses-chart__day">thu</li>
+            <li class="expenses-chart__day">fri</li>
+            <li class="expenses-chart__day">sat</li>
+            <li class="expenses-chart__day">sun</li>
+          </ul>
+        </div>
+      </div>
+      <div class="expenses-chart__total total">
+        <div class="total__details">
+          <span class="total__period">Total this month</span>
+          <h1 class="total__amount">$478.33</h1>
+        </div>
+        <div class="totral__change">
+          +2.4%
+          <span class="total__period">from last month</span>
+        </div>
+      </div>
+    </div>
+  </div>
 </body>
 </html>
