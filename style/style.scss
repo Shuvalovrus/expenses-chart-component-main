@@ -1,15 +1,179 @@
 @import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;700&display=swap');
-
+/* VARIABLES */
 $softRed: hsl(10, 79%, 65%);
 $cyan: hsl(186, 34%, 60%);
 $darkBrown: hsl(25, 47%, 15%);
 $mediumBrown: hsl(28, 10%, 53%);
 $cream: hsl(27, 66%, 92%);
 $veryPaleOrange: hsl(33, 100%, 98%);
-
+/* VARIABLES */
+/* COMMON */
 * {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
 }
+html, body {
+    min-height: 100vh;
+}
 
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 15px;
+    background-color: $cream;
+}
+/* /COMMON */
+/* BALANCE */
+.balance {
+    display: flex;
+    justify-content: space-between;
+    padding: 28px 39px 26px 33px;
+    background-color: $softRed;
+    border-radius: 20px;
+    &__info {
+        color: $veryPaleOrange;
+    }
+    &__title {
+        display: block;
+        margin: 0 0 5px 0   ;
+    }
+    &__amount {
+        font-size: 32px;
+        font-weight: 700;
+    }
+}
+/* BALANCE */
+/* EXPENSES CHART */
+.expenses-chart {
+    width: 540px;
+    font-family: 'DM Sans', sans-serif;
+    font-size: 18px;
+    color: $darkBrown;
+    &__title {
+        font-size: 32px;
+        margin: 0 0 65px 0;
+    }
+    &__balance {
+        margin: 0 0 20px 0;
+    }
+    &__details {
+        padding: 35px 35px 40px 40px;
+        background-color: $veryPaleOrange;
+        border-radius: 20px;
+    }
+    &__chart {
+        padding: 0 0 60px 0;
+        border-bottom: 2px solid $cream;
+    }
+    &__list {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-end;
+        list-style-type: none;
+        height: 150px;
+    }
+    &__item {
+        position: relative;
+        flex: 0 1 10.9%;
+        border-radius: 5px;
+        background-color: rgba(228, 124, 103, 1);
+        text-align: center;
+        &:hover {
+            background-color:rgba(228, 124, 103, .7);
+            .expenses-chart__hint{
+                visibility: visible;
+                background-color: rgba(56, 35, 20, 1) ;
+                z-index: 1;
+            }
+        }
+        &:hover.expenses-chart__item_current {
+            background-color: rgba(118, 181, 188, .7);
+        }
+    }
+    &__item_current {
+        background-color: rgba(118, 181, 188, 1);
+    }
+    &__hint{
+        visibility: hidden;
+        position: absolute;
+        top: -33px;
+        left: 0;
+        min-width: 100%;
+        width: fit-content;
+        height: 30px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 0 5px;
+        letter-spacing: 0.1em;
+        font-size: 10px;
+        border-radius: 5px;
+        background-color: rgba(56, 35, 20, 0) ;
+        color: $veryPaleOrange;
+        transition: all .2s ease;
+    }
+    &__day {
+        position: absolute;
+        width: 100%;
+        left: 0;
+        bottom: -30px;
+        text-align: center;
+        font-size: 15px;
+        color: $mediumBrown;
+    }
+    &__total { 
+        padding: 30px 0 0 0;
+    }
+}
+/* /EXPENSES CHART */
+/* TOTAL */
+.total {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    &__change {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+        font-weight: 700;
+    }
+    &__period {
+        margin: 5px 0 0 0;
+        color: $mediumBrown;
+        display: block;
+        font-weight: 400;
+    }
+    &__amount { 
+        margin: 3px 0 0 0;
+        font-size: 46px;
+    }
+}
+/* /TOTAL */
+/* MEDIA */
+@media screen and (max-width: 480px) {
+    .expenses-chart {
+        &__hint {
+            font-size: 10px;
+        }
+        &__title {
+            font-size: 18px;
+        }
+        &__day {
+            font-size: 12px;
+        }
+    }
+    .total {
+        &__period {
+            font-size: 14px
+        }
+        &__amount {
+            font-size: 22px;
+        }
+        &__change {
+            font-size: 18px;
+        }
+    }
+}
+/* /MEDIA */

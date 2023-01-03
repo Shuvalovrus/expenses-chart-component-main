@@ -10,40 +10,60 @@
   <title>Frontend Mentor | Expenses chart component</title>
 </head>
 <body>
-  <div class="wrapper">
-    <div class="expenses-chart">
-      <div class="expenses-chart__balance balance">
-        <div class="balance__info">
-          <span class="balance__title">My balance</span>
-          <span class="balance__amount">$921.48</span>
-        </div>
-        <img src="./images/logo.svg" alt="Logo">
+  <div class="expenses-chart">
+    <div class="expenses-chart__balance balance">
+      <div class="balance__info">
+        <span class="balance__title">My balance</span>
+        <span class="balance__amount">$921.48</span>
       </div>
-      <div class="expenses-chart__details">
-        <h2 class="expenses-chart__title">Spending - Last 7 days</h2>
-        <div class="expenses-chart__chart">
-          <ul class="expenses-chart__list">
-            <li class="expenses-chart__day">mon</li>
-            <li class="expenses-chart__day">tue</li>
-            <li class="expenses-chart__day">wed/li>
-            <li class="expenses-chart__day">thu</li>
-            <li class="expenses-chart__day">fri</li>
-            <li class="expenses-chart__day">sat</li>
-            <li class="expenses-chart__day">sun</li>
-          </ul>
-        </div>
+      <img src="./images/logo.svg" alt="Logo">
+    </div>
+    <div class="expenses-chart__details">
+      <h1 class="expenses-chart__title">Spending - Last 7 days</h1>
+      <div class="expenses-chart__chart">
+        <ul class="expenses-chart__list">
+          <li class="expenses-chart__item">
+            <span class="expenses-chart__hint"></span>
+            <span class="expenses-chart__day">mon</span>
+          </li>
+          <li class="expenses-chart__item">
+            <span class="expenses-chart__hint"></span>
+            <span class="expenses-chart__day">tue</span>
+          </li>
+          <li class="expenses-chart__item">
+            <span class="expenses-chart__hint"></span>
+            <span class="expenses-chart__day">wed</span>
+          </li>
+          <li class="expenses-chart__item">
+            <span class="expenses-chart__hint"></span>
+            <span class="expenses-chart__day">thu</span>
+          </li>
+          <li class="expenses-chart__item">
+            <span class="expenses-chart__hint"></span>
+            <span class="expenses-chart__day">fri</span>
+          </li>
+          <li class="expenses-chart__item">
+            <span class="expenses-chart__hint"></span>
+            <span class="expenses-chart__day">sat</span>
+          </li>
+          <li class="expenses-chart__item">
+            <span class="expenses-chart__hint"></span>
+            <span class="expenses-chart__day">sun</span>
+          </li>
+        </ul>
       </div>
       <div class="expenses-chart__total total">
         <div class="total__details">
           <span class="total__period">Total this month</span>
-          <h1 class="total__amount">$478.33</h1>
+          <h2 class="total__amount">$478.33</h2>
         </div>
-        <div class="totral__change">
+        <div class="total__change">
           +2.4%
           <span class="total__period">from last month</span>
         </div>
       </div>
     </div>
   </div>
+  <script src="./js/script.js"></script>
 </body>
 </html>
